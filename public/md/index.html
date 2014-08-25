@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>破冰转身</title>
+  <meta name="author" content="luRKer">
+  
+  <meta name="description" content="Online Markdown Editor
+
+        
+		
+
+        
+		
+
+        
+        
+
+        
+        
+
+        
+        
+        
+
+
+        
+
+    
+
+        
+        ">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="破冰转身"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="破冰转身" type="application/atom+xml">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-54128333-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <header id="header" class='normal_mode'>
+    <nav id="main-nav">
+  <ul class='container'>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/maths">Maths</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+  </header>
+  <div id="content" class="container">
+    <article class="page">
+  
+  <div class="post-content">
+    <header>
+      
+    </header>
+    <div class="entry">
+      
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Online Markdown Editor</title>
+
+        <!-- Bootstrap -->
+		<link href="static/css/bootstrap.css" rel="stylesheet" media="screen">
+
+        <!-- jQuery UI -->
+		<link href="static/css/smoothness/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" media="screen">
+
+        <!-- awesome font -->
+        <link href="static/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+        <link href="static/editor/google-code-prettify/prettify.css" type="text/css" rel="stylesheet">
+        <link href="static/editor/editor.css" rel="stylesheet">
+
+        <!-- Bootstrap Responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+        
+</head>
+    <body class="theme">
+
+        <div id="container">
+            <div id="editor-nav-bar">
+                <div id="wmd-button-bar" class="pull-left"></div>
+                <div id="preview-button-bar" class="pull-right">
+                    <ul id="preview-button-row" class="preview-button-row">
+                        <li class="preview-button" id="preview-new-button" title="新建文件 Ctrl+Alt+N">
+                            <span class="icon-file muted"></span>
+                        </li>
+                        <li class="preview-button" id="preview-theme-button" title="主题切换 Ctrl+Alt+J">
+                            <span class="icon-shield muted"></span>
+                        </li>
+                        <li class="preview-button" id="preview-reader-full-button" title="阅读模式 Ctrl+Alt+M">
+                            <span class="icon-desktop muted"></span>
+                        </li>
+                        <li class="preview-button" id="preview-reader-small-button" title="预览模式 Ctrl+Alt+M">
+                            <span class="icon-columns muted"></span>
+                        </li>
+                        <li class="preview-button" id="preview-fullscreen-button" title="全屏模式 F11">
+                            <span class="icon-fullscreen muted"></span>
+                        </li>
+                        <!-- There is at least one item of 'wmd-spacer' must be in the ul list, otherwise, the hover on the button leads to page issue. -->
+                        <li class="wmd-spacer"></li>
+                    </ul>
+                </div>
+               
+                <div class="clearfix"></div>
+            </div>
+
+            <div id="left-column" class="pull-left">
+                <div id="wmd-panel-editor" class="wmd-panel-editor">
+                    <textarea class="wmd-input theme" id="wmd-input" spellcheck="false"></textarea>
+                </div>
+            </div>
+            <div id="right-column" class="pull-right">
+                <div id="wmd-panel-preview" class="wmd-panel-preview preview-container">
+                    <div id="wmd-preview" class="wmd-preview"></div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+
+        <!-- Hidden md-section-helper is used to calculate the height of md sections. -->
+        <textarea id="md-section-helper"></textarea>
+
+        <!-- Hidden Popup Modal -->
+        <div id="editorDialog" class="modal hide fade theme" tabindex="-1" role="dialog" aria-labelledby="notification-title" aria-hidden="true">
+            <div class="modal-header theme">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="editorDialog-title"></h3>
+            </div>
+            <div class="modal-body theme">
+                <p></p>
+                <i class="icon-2x"></i> <input class="span5" type="text" placeholder="">
+            </div>
+            <div class="modal-footer theme">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+                <button id="editorDialog-confirm" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+
+        <!-- full editor reader, hidden when loading. -->
+        <div id="editor-reader-full" class="editor-reader-full-hidden">
+        </div>
+
+
+		<!-- Hidden Popup Modal -->
+		<div id="notification" class="modal hide fade theme" tabindex="-1" role="dialog" aria-labelledby="notification-title" aria-hidden="true">
+			<div class="modal-header theme">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="notification-title">通知</h3>
+			</div>
+			<div class="modal-body theme">
+				<p></p>
+			</div>
+			<div class="modal-footer theme">
+				<button id="notification-cancel" class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+				<button id="notification-confirm" class="btn btn-primary">确认</button>
+			</div>
+		</div>
+
+
+        <!-- jquery & Bootstrap -->
+        <script src="static/js/jquery-1.8.3.min.js"></script>
+        <script src="static/js/jquery-ui-1.10.2.custom.min.js"></script>
+        <script src="static/js/jquery.ui.datepicker-zh-CN.js"></script>
+        <script src="static/js/bootstrap.js"></script>
+
+        <script src="static/js/jquery.storage.js"></script>
+        <script src="static/editor/google-code-prettify/prettify.js"></script>
+        <script src="static/editor/pagedown/Markdown.Converter.js"></script>
+        <script src="static/editor/pagedown/Markdown.Sanitizer.js"></script>
+        <script src="static/editor/pagedown/Markdown.Editor.js"></script>
+        <script src="static/editor/pagedown/local/Markdown.local.zh.js"></script>
+        <script src="static/editor/Markdown.Extra.js"></script>
+        <script src="static/editor/underscore.js"></script>
+        <script src="static/editor/css_browser_selector.js"></script>
+        <script src="static/editor/scrollLink.js"></script>
+        <!--mathjax-->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]], processEscapes: true },  messageStyle: "none"});
+        </script>
+        <!--mathjax source code is here: https://github.com/mathjax/MathJax, you could host it on your own server one day.-->
+        <script src="static/editor/mathJax.js"></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="static/editor/jquery.waitforimages.js"></script>
+        <script src="static/editor/jquery.autosize-min.js"></script>
+        <script src="static/editor/editor.js"></script>
+    </body>
+</html>
+    
+
+      
+    </div>
+    <footer>
+      
+          
+<div class="bdsharebuttonbox" data-tag="share_1">
+	<a class="bds_mshare" data-cmd="mshare"></a>
+	<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+	<a class="bds_tsina" data-cmd="tsina"></a>
+	<a class="bds_baidu" data-cmd="baidu"></a>
+	<a class="bds_renren" data-cmd="renren"></a>
+	<a class="bds_tqq" data-cmd="tqq"></a>
+	<a class="bds_more" data-cmd="more">更多</a>
+	<a class="bds_count" data-cmd="count"></a>
+</div>
+
+          <div class="clearfix"></div>
+          <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div>
+  
+  &copy; 2014 luRKer
+  
+</div>
+Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="external">Hexo</a> and <a href="http://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>
+
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery.imagesloaded.min.js" type="text/javascript"></script>
+<script src="/js/gallery.js" type="text/javascript"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+var disqus_shortname = 'lurker39';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    <script type="text/javascript">
+        (function(){
+
+            $(window).scroll(function(){
+
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop >200 ){
+                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
+                } else{
+                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
+                }
+
+            });
+
+        })();
+    </script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox({
+      'titlePosition': 'inside'
+    });
+  })(jQuery);
+  </script>
+
+
+
+
+<script type="text/javascript">
+  
+  $(function(){
+
+    $('.title').hover(
+      function() {      
+        $(this).stop().animate(
+          {'marginLeft': '10px'}, 200
+        );   
+      }, 
+      function() {       
+        $(this).stop().animate({'marginLeft': '0px'}, 200);      
+      
+    });   
+
+  });
+
+</script>
+
+
+</body>
+</html>

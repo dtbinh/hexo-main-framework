@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>破冰转身</title>
+  <meta name="author" content="luRKer">
+  
+  <meta name="description" content="How does Python benefit the Java based StubHub ?
+Since 2006, Python has been pretty popular, you could see more and more startup companies choose Pyth">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="破冰转身"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="破冰转身" type="application/atom+xml">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-54128333-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <header id="header" class='normal_mode'>
+    <nav id="main-nav">
+  <ul class='container'>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/maths">Maths</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+  </header>
+  <div id="content" class="container">
+    <article class="page">
+  
+  <div class="post-content">
+    <header>
+      
+    </header>
+    <div class="entry">
+      
+        <h1 id="How_does_Python_benefit_the_Java_based_StubHub_?">How does Python benefit the Java based StubHub ?</h1>
+<p>Since 2006, Python has been pretty popular, you could see more and more startup companies choose Python as the primary language when they start their business, for example:</p>
+<p><strong>Netflix</strong> - TV Shows &amp; Movies online company<br><strong>Dropbox</strong> - The most popular file synchronization and sharing tool<br><strong>YouTube</strong> - Sharing videos online<br><strong>Disqus</strong> - Online discussion and commenting service<br><strong>OpenStack</strong> - An all-open-source, all-Python infrastructure for building public and private clouds</p>
+<p>While the startup companies get more and more benefits from this elegant and neat language as the infrastructure to support their fast growing business, I’m thinking how we, StuhbHub - a Java ecosystem based company could benefit from it either, to save working hours and enhance the productivity significantly, I will explain what and why is Python and show you the Python solutions in our daily work.</p>
+<h2 id="What_and_Why_is_Python_?">What and Why is Python ?</h2>
+<p>Python is an interpreted, object-oriented dynamic language, and of cause like Java, it’s a cross-platform language as well. Compared with the traditional mainstream language like Java/C++, programmers adore it because of the reasons below:</p>
+<h3 id="1-_Python_is_a_versatile_language">1. Python is a versatile language</h3>
+<p>As we know, every language has its own advantage or disadvantage, like People will write C++ codes for games on Windows operation system, but no one will build a website by writing C++. The good news is that you could leverage Python for almost any task such as: web application, GUI desktop application, Linux script or any other handy tools, and on the top of that, as “glue language” you could even invoke the other language like Java/C++ in your python code, that means your existing code base could be reused.</p>
+<h3 id="2-_Python_is_more_productive">2. Python is more productive</h3>
+<p>General speaking, the distinct difference when we talking about Python and Java is that as the dynamic language, there is no compilation step necessary. Under this hood, that means “productivity”.</p>
+<p>Remember how we verify a modification in Java code ? Especially in StubHub, we own a extremely large code base. </p>
+<ol>
+<li>Modify your Java code. (1 min)</li>
+<li>ant/maven to compile your Java code to byte code. (5 mins)</li>
+<li>Restart JBoss/Tomcat to deploy your application. (5 mins)</li>
+<li>Open your browser and see the changes.</li>
+</ol>
+<p>Here is the pain point: suppose you have a bug fix takes you 1 minute, but you have to wait at least 10 minutes to see the changes in your browser, the worse is that the fix is not working, therefore, another 10 minutes just for build/deploy is awaiting for you.</p>
+<p>While you are working with Python, it’s pretty easier.</p>
+<ol>
+<li>Modify your Python code. (1 min)</li>
+<li>F5 to refresh your browser to see the changes.</li>
+</ol>
+<p><strong>Congrats! You are saving 10 minutes for each iteration on your code change</strong>.</p>
+<p>Consider how many times in each day, each developer will have the code change and how many developers in a large organization like StubHub, you could calculate how many working hours you could save in all. That is huge and more than your imagine.</p>
+<h3 id="3-_Python_is_elegant,_neat_and_compact">3. Python is elegant, neat and compact</h3>
+<p>And there is another major advantage. The syntax of Python is pretty cool, I had a chance to implement the same function with both Python and Java twice, it takes me only 50% code line to do the same thing by Python compared with Java. Base on this, that’s why people like to write pseudo code to verify ideas or implement a rapid prototype by writing Python code. It’s quicker to let you know whether your ideas or prototypes are doable or viable, and after that, you could then rewrite your codes in Java for production. That is better than, from the very beginning, you start codes with Java but find out your prototype is not viable.</p>
+<h2 id="Python_Stories_In_StubHub">Python Stories In StubHub</h2>
+<p>StubHub go with the technical route like below:</p>
+<p>Generation 1: coldfusion<br>Generation 2: Java, flow based framework.<br>Generation 3: Java, Tapestry + Spring + Hibernate, all kinds of modern technical framework.</p>
+<p>You could see the whole technical ecosystem thrives based on Java. Sometimes it’s impossible as the engineer you could convince the team or architects to discard all the existing code base or convert the underneath fundamentals from Java to another one, but still, there is some room you could get things done better and quicker, let me show you the stories from my personal working scenarios in StubHub.</p>
+<h3 id="Story_1:_Handle_the_Java_source_codes_by_Python">Story 1: Handle the Java source codes by Python</h3>
+<p>In 2011, StubHub Tech Team kicked off a one-week activity named <strong>fixit</strong>, the activity required all the developers try to write as many as possible test cases for existing codes to enhance the overall test coverage within one week. But before that, we need to mark some test cases as “broken” first, because if there is any test case failed, the analysis tool can’t produce the coverage report.</p>
+<p>The point is that it’s easy to mark the test cases as “broken”: just add @Test annotations with broken attribute like below:</p>
+<p>From</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SomeTest</span> </span>{</div><div class="line">...</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>To</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="annotation">@Test</span>(groups = {<span class="string">"broken"</span>})</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SomeTest</span> </span>{</div><div class="line">...</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>But there are hundreds of test cases source codes in StubHub code base.  That means you have to find them all first, check one case out from repository, modify the source code, check in back the changes and then repeat the steps for the next case until hundreds of cases have been handled.</p>
+<p>This is boring. And I think it’s Python could handle file operations repeatedly well not me. Thus I have the Python code snippet below to handle it automatically:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">start</span><span class="params">(path_name)</span>:</span></div><div class="line">    <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(<span class="string">'src/'</span> + path_name):</div><div class="line">        <span class="keyword">if</span> files:</div><div class="line">            <span class="keyword">for</span> file <span class="keyword">in</span> files:</div><div class="line">                filename = root + <span class="string">'/'</span> + file</div><div class="line">                <span class="keyword">print</span> <span class="string">'filename: '</span> + filename</div><div class="line">                os.system(<span class="string">'p4 edit //depot/project/pb_fixit_2011/gen31/test/'</span> + filename)</div><div class="line">                <span class="keyword">with</span> open(filename, <span class="string">'r+'</span>) <span class="keyword">as</span> javafile:</div><div class="line">                    fileContent = javafile.read()</div><div class="line">                    matcher = re.search(<span class="string">r'@Test([\w\W]*?)public class'</span>, fileContent)</div><div class="line">                    <span class="keyword">if</span> <span class="keyword">not</span> matcher:</div><div class="line">                        fileContent = re.sub(<span class="string">r'public class'</span>, <span class="string">'@Test(groups = {"broken"} )\npublic class'</span>,  fileContent)</div><div class="line">                        javafile.seek(<span class="number">0</span>) <span class="comment"># return to 0 file position</span></div><div class="line">                        javafile.write(fileContent)</div></pre></td></tr></table></figure>
+
+<p>Just 14 lines, the codes walk through the given path and check out files from Perforce by <code>p4 edit ...</code>, read file content from Java source file, use the regular expression to mark the test case as broken and then write back the changes to the source file. I suppose this script saved me one day work.</p>
+<h3 id="Story_2:_Testing_on_3rd_party_API">Story 2: Testing on 3rd party API</h3>
+<p>In 2012, I joined a project named Gift Card, there is a 3rd party technical partner named Black Hawk who provides the redeem/reversal money Web Service APIs. At the very beginning of this project, they want to make sure the API calls from StubHub testing server is accessible to Black Hawk server. Since it’s just a verification, it’s not that serious to write down the formal, exception-well-handled Java codes, deploy the codes to somewhere we have the JRE installed and HttpClient libs there as the prerequisites and then begin to test APIs (By the way, Python is pre-installed for almost all the Linux distributions as the fundamental). When I think it’s not formal codes in the future it could be reused or maintained by others, Here is what Python could do for the same thing:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> httplib2 <span class="keyword">import</span> Http</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">call_bh</span><span class="params">(url)</span>:</span></div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        http = Http()</div><div class="line"></div><div class="line">        <span class="comment"># Post request parameters</span></div><div class="line">        body = <span class="string">"""&lt;?xml version="1.0" encoding="UTF-8"?&gt; </span></div><div class="line">            &lt;bhnums:request </div><div class="line">            ......</div><div class="line">            &lt;/bhnums:request&gt; </div><div class="line">        """</div><div class="line">        headers = {<span class="string">'Content-type'</span>: <span class="string">'text/xml;charset=UTF-8'</span>}</div><div class="line"></div><div class="line">        response, content = http.request(url, <span class="string">"POST"</span>, headers=headers, body=body)</div><div class="line"></div><div class="line">        <span class="comment"># Expected post response</span></div><div class="line">        <span class="keyword">print</span> content</div><div class="line">    <span class="keyword">except</span> Exception, e:</div><div class="line">        <span class="keyword">print</span> e</div><div class="line">        <span class="keyword">print</span> <span class="string">'fail to call black hawk.'</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'success to call black hawk.'</span></div></pre></td></tr></table></figure>
+
+<p>Calling the service via Python is joyful. Although at first, it failed, But since the code is pretty short and readable, I just copied the Python snippet to the email and asked the 3rd party guys: “Is there anything wrong”? They replied me with some correction in the http request body, then I edited the codes on our testing server, tried again, it worked. There is no JRE/IDE/compilation/build/deployment here, just ssh to your Linux server, edit your codes with vi/emacs editor and <strong>Run !</strong>.</p>
+<h3 id="Story_3:_Resend_Rewards_Emails_to_customers">Story 3: Resend Rewards Emails to customers</h3>
+<p>In 2012, there was another project named Rewards which would give our users some discounts if they engaged this campaign. And when they engaged it, they would be supposed to receive a mail about the details of this campaign. Unfortunately, because of the environment issue, there were 1285 users fail to receive this mail so that they may not know how to get discounts, although they had already joined Rewards campaign. Thus, I was required to resend the mails to make up for this issue.</p>
+<p>The task was emergent and valuable for the user if we could resend the mails as soon as possible. But if we go with the traditional Java codes, we need to have the SQLs to pick up the missing users from database first, invoke this SQL by JDBC or Hibernate, write down codes for resending email and figure out somewhere to build/deploy codes in production, and then roll back the deployment, since it’s supposed to be used once. That is ugly and I could imagine, it at least takes us 2 days for development and deployment.</p>
+<p>While choosing Python, the thing is easier. It’s still some kind of script running on Linux server. To avoid reading database, I could pick up the user id from database first and write them into the script as the list like this.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">users = [<span class="number">556483</span>, <span class="number">556480</span>, <span class="number">556477</span>, <span class="number">556379</span>, <span class="number">556378</span>, <span class="number">556471</span>, <span class="number">556374</span>, <span class="number">469686</span>, <span class="number">556369</span>, <span class="number">556466</span>, <span class="number">556365</span>, <span class="number">556364</span>, <span class="number">556462</span>, <span class="number">556460</span>, <span class="number">556362</span>, <span class="number">556360</span>, <span class="number">556456</span>, ...]</div></pre></td></tr></table></figure>
+
+<p>It looks like 1285 user ids is a large amount,  but still it’s acceptable they are all in a python list as the part of script, then let’s resend mail to the users:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sendmail_to_all</span><span class="params">(users, url)</span>:</span></div><div class="line">    <span class="keyword">for</span> user <span class="keyword">in</span> users:</div><div class="line">        time.sleep(<span class="number">1</span>)</div><div class="line">        sendmail(user, url)</div></pre></td></tr></table></figure>
+
+<p>At last, just one night, I guess all our users got their missing rewards mails.</p>
+<h3 id="Story_4:_Recommendation_Prototype">Story 4: Recommendation Prototype</h3>
+<p>In 2010, one of my colleagues, who is a master at Mathematics, proposed a recommendation algorithm for StubHub, basically, the idea is that when the user is browsing the genre/event information on Stubhub, the system will guess what’s the most interested genres/events the user maybe purchase as well. I think the chances are we need Python once again to build a rapid application and see whether his recommendation algorithm works or not.</p>
+<p>So I took 15 minutes to discuss algorithm with him and try to understand the underneath magic rules, I was crystal after 15 minutes and started coding with Python.</p>
+<p>First, I just want to make the prototype work for verifying algorithm, I’m not going to go with Java to do some server side changes, data modal changes, that’s more like a formal project to me not a prototype. Thus, I think I could have a GUI desktop application with the built-in browser, people could operate the built-in browser and recommended information could be displayed on GUI application instead of browser, so that we avoid server side changes. Fortunately, It’s not difficult for Python to build a GUI app.</p>
+<p>Second, I need to process the historical order info from database to calculate the data, and then apply the algorithm. As you might know, Python is good at processing data as well.</p>
+<p>Finally, two days later, with the unrelenting coding with Python, I derived a coarse prototype like below:</p>
+<p>The left side of the GUI app is a built-in browser which is rendering the events of Los Angeles Lakes, and the right side of the GUI app is the recommended events which people may be interested based on the current event in the built-in browser. The top event of the recommended events is the match between 76ers and Lakers in 2010, guess you could tell me whether this make sense or not to NBA fans. :)</p>
+<p><img src="https://lh6.googleusercontent.com/-adGChNMTZxM/UcuRJzYDQrI/AAAAAAAAAOU/iotr53MsUPE/s0/recomm_U.jpg" alt="recommendation-screenshot" title="recomm_U.jpg"></p>
+<p>Let’s just suppose the result is not that ideal, but at least within two days, we have the chance to know whether the algorithm is viable or not. This is even more important than we derive a good algorithm by Java within two weeks. The quicker you prove you are wrong, the quicker you could sift through a better algorithm. That’s the point. What if your Java prototype fails? Instead of two days, you lost two weeks, the cost is expensive.</p>
+<h2 id="The_End_Of_The_Python_Stories">The End Of The Python Stories</h2>
+<p>These are all my Python Stories in StubHub, maybe they are trivial but I believe the stories will go on continuously. The thing is that we are not talking about which one is better: Java or Python or C++, I don’t care, I know only the more I could arm myself, the more powerful I could be, to tackle with all kinds of scenarios and not only work hard but also work smart.</p>
+<p>This makes the life easier.</p>
+
+      
+    </div>
+    <footer>
+      
+          
+<div class="bdsharebuttonbox" data-tag="share_1">
+	<a class="bds_mshare" data-cmd="mshare"></a>
+	<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+	<a class="bds_tsina" data-cmd="tsina"></a>
+	<a class="bds_baidu" data-cmd="baidu"></a>
+	<a class="bds_renren" data-cmd="renren"></a>
+	<a class="bds_tqq" data-cmd="tqq"></a>
+	<a class="bds_more" data-cmd="more">更多</a>
+	<a class="bds_count" data-cmd="count"></a>
+</div>
+
+          <div class="clearfix"></div>
+          <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div>
+  
+  &copy; 2014 luRKer
+  
+</div>
+Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="external">Hexo</a> and <a href="http://pages.github.com/" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>
+
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery.imagesloaded.min.js" type="text/javascript"></script>
+<script src="/js/gallery.js" type="text/javascript"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+var disqus_shortname = 'lurker39';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+    <script type="text/javascript">
+        (function(){
+
+            $(window).scroll(function(){
+
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop >200 ){
+                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
+                } else{
+                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
+                }
+
+            });
+
+        })();
+    </script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox({
+      'titlePosition': 'inside'
+    });
+  })(jQuery);
+  </script>
+
+
+
+
+<script type="text/javascript">
+  
+  $(function(){
+
+    $('.title').hover(
+      function() {      
+        $(this).stop().animate(
+          {'marginLeft': '10px'}, 200
+        );   
+      }, 
+      function() {       
+        $(this).stop().animate({'marginLeft': '0px'}, 200);      
+      
+    });   
+
+  });
+
+</script>
+
+
+</body>
+</html>
